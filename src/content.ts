@@ -1,3 +1,3 @@
 chrome.storage.local.get(['bots'], (value) => {
-  console.log(value);
+  // console.log(value);
 });
