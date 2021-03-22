@@ -1,5 +1,5 @@
 import * as React from "react";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import "./App.css";
 
 const App = () => {
@@ -7,9 +7,10 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          And here will be VC bots finder!
-        </p>
+        <div className="App-settings">
+          Bots finder
+          <input type="checkbox"></input>
+        </div>
       </header>
     </div>
   );

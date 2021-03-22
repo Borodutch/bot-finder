@@ -24,7 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*/*"
+        "*://vc.ru/*"
       ],
       "js": [
         "content.js"
