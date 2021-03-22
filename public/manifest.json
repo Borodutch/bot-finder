@@ -15,12 +15,9 @@
     },
     "default_popup": "popup.html"
   },
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
       "matches": [
