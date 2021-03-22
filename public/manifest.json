@@ -1,6 +1,6 @@
 {
-  "name": "Chrome Extension Boilerplate",
-  "description": "Chrome Extension boilerplate created with React Typescript.",
+  "name": "VC bots finder",
+  "description": "Web extension that shows account creation date and last comments for users of vc.ru in the comments.",
   "manifest_version": 2,
   "version": "1.0.0",
   "icons": {
