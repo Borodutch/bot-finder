@@ -16,8 +16,17 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs",
+    "activeTab",
+    "webNavigation"
   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": [
@@ -25,7 +34,8 @@
       ],
       "js": [
         "content.js"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ]
 }
