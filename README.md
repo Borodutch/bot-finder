@@ -2,7 +2,6 @@
 
 ## Getting started
 
-Create a project based on this boilerplate.
 Navigate to the project directory and install the dependencies.
 
 ```
