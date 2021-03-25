@@ -72,7 +72,10 @@ const config = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: 'public', to: '.' }],
+      patterns: [
+        { from: 'public', to: '.' },
+        { from: 'manifests/webkit/manifest.json', to: '.' },
+      ],
     }),
   ],
 };

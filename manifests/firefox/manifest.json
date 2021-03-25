@@ -24,8 +24,7 @@
   "permissions": [
     "storage",
     "tabs",
-    "activeTab",
-    "webNavigation"
+    "activeTab"
   ],
   "background": {
     "scripts": [

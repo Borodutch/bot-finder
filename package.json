@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Web extension that shows account creation date and last comments for users of vc.ru in the comments.",
   "scripts": {
-    "release-webkit": "webpack --mode=production && node ./scripts/release-webkit.js",
-    "release-firefox": "webpack --mode=production && node ./scripts/release-firefox.js"
+    "release-webkit": "webpack --mode=production --config ./webpack.config.webkit.js && node ./scripts/build-archive.js",
+    "release-firefox": "webpack --mode=production --config ./webpack.config.firefox.js && node ./scripts/build-archive.js"
   },
   "keywords": [
     "chrome",
