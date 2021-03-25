@@ -9,13 +9,13 @@ Navigate to the project directory and install the dependencies.
 $ yarn
 ```
 
-# To build the extension for Chrome and Opera, run
+## To build the extension for Chrome and Opera, run
 
 ```
 $ yarn release-webkit
 ```
 
-# To build the extension for Firefox, run
+## To build the extension for Firefox, run
 
 ```
 $ yarn release-firefox
