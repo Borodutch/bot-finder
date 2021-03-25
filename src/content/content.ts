@@ -52,10 +52,20 @@ const runScript = async () => {
   }
 };
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  const botButtonsToRemove = Array.from(document.querySelectorAll('.__vcbf'));
-  for (let botButton of botButtonsToRemove) {
-    botButton.remove();
+chrome.storage.local.get(['bots'], function (data) {
+  if (data.bots) {
+    chrome.runtime.onMessage.addListener(function (
+      request,
+      sender,
+      sendResponse
+    ) {
+      const botButtonsToRemove = Array.from(
+        document.querySelectorAll('.__vcbf')
+      );
+      for (let botButton of botButtonsToRemove) {
+        botButton.remove();
+      }
+      runScript();
+    });
   }
-  runScript();
 });

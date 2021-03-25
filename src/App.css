@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: sans;
 }
 
 .App {
@@ -27,10 +28,6 @@ body {
   min-width: 100px;
   padding: 10px;
   color: #444;
-}
-
-.App-header--inactive {
-  background-color: #eee;
 }
 
 .App-settings {
