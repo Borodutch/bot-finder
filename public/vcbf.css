@@ -1,0 +1,15 @@
+.__vcbf {
+  position: relative;
+}
+
+.__vcbf__popup {
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 4px 8px 0 rgb(0 0 0 / 7%);
+  z-index: 9999;
+  border-radius: 5px;
+  font-size: 13px;
+  width: 200px;
+}

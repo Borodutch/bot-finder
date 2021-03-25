@@ -42,7 +42,10 @@
       "js": [
         "content.js"
       ],
-      "run_at": "document_end"
+      "css": [
+        "vcbf.css"
+      ],
+      "run_at": "document_idle"
     }
   ]
 }
