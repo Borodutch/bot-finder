@@ -1,16 +1,18 @@
 {
   "name": "vc-bots-finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web extension that shows account creation date and last comments for users of vc.ru in the comments.",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack --watch"
+    "release-webkit": "webpack --mode=production && node ./scripts/release-webkit.js",
+    "release-firefox": "webpack --mode=production && node ./scripts/release-firefox.js"
   },
   "keywords": [
     "chrome",
     "opera",
     "firefox",
-    "extention"
+    "extention",
+    "vc.ru",
+    "vc bots finder"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -34,12 +36,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.5",
-    "got": "^11.8.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-hot-loader": "^4.13.0",
-    "stream-browserify": "^3.0.0",
-    "util": "^0.12.3"
+    "zip-a-folder": "^0.1.0"
   }
 }
