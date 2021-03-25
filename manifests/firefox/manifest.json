@@ -1,6 +1,6 @@
 {
-  "name": "VC bots finder",
-  "description": "Web extension that shows account creation date and last comments for users of vc.ru in the comments.",
+  "name": "VC Это бот?",
+  "description": "Простое расширение, которое позволяет быстро увидеть, бот ли пользователь в комментариях.",
   "manifest_version": 2,
   "version": "1.0.0",
   "icons": {
@@ -21,29 +21,17 @@
       "strict_min_version": "45.0"
     }
   },
-  "permissions": [
-    "storage",
-    "tabs",
-    "activeTab"
-  ],
+  "permissions": ["storage", "tabs", "activeTab"],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
+    "scripts": ["background.js"],
     "persistent": true
   },
   "short_name": "VC bots",
   "content_scripts": [
     {
-      "matches": [
-        "*://vc.ru/*"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "css": [
-        "vcbf.css"
-      ],
+      "matches": ["*://vc.ru/*"],
+      "js": ["content.js"],
+      "css": ["vcbf.css"],
       "run_at": "document_idle"
     }
   ]
