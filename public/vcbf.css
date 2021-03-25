@@ -13,3 +13,10 @@
   font-size: 13px;
   width: 200px;
 }
+
+@media only screen and (max-width: 600px) {
+  .__vcbf__popup {
+    width: 150px !important;
+    left: -40px !important;
+  }
+}
