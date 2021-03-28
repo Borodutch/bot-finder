@@ -1,10 +1,15 @@
 {
-  "name": "vc-bots-finder",
+  "name": "bot-finder",
   "version": "1.0.0",
   "description": "Web extension that shows account creation date and last comments for users of vc.ru, dtf.ru and tjournal.ru in the comments.",
   "scripts": {
-    "release-webkit": "webpack --mode=production --config ./webpack.config.webkit.js && node ./scripts/build-archive.js",
-    "release-firefox": "webpack --mode=production --config ./webpack.config.firefox.js && node ./scripts/build-archive.js"
+    "increment-version": "versiony package.json --patch && versiony manifests/firefox/manifest.json --patch && versiony manifests/webkit/manifest.json --patch && git add . && git commit -m 'new version' && git push",
+    "build-webkit": "webpack --mode=production --config ./webpack.config.webkit.js",
+    "build-firefox": "webpack --mode=production --config ./webpack.config.firefox.js",
+    "archive": "node scripts/build-archive.js",
+    "publish-chrome": "node scripts/publish-chrome.js",
+    "publish-firefox": "node scripts/publish-firefox.js",
+    "build-and-publish": "yarn increment-version && yarn build-webkit && yarn publish-chrome && yarn build-firefox && yarn publish-firefox"
   },
   "keywords": [
     "chrome",
@@ -25,21 +30,24 @@
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
+    "chrome-webstore-upload": "^0.4.4",
     "copy-webpack-plugin": "^6.2.1",
     "css-loader": "^5.0.0",
+    "dotenv": "^8.2.0",
     "file-loader": "^6.1.1",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.5",
     "typescript": "^4.0.3",
     "url-loader": "^4.1.1",
+    "versiony": "^2.0.1",
     "webpack": "^5.1.3",
     "webpack-cli": "^4.0.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "zip-a-folder": "^0.1.0"
   },
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-hot-loader": "^4.13.0",
-    "zip-a-folder": "^0.1.0"
+    "react-hot-loader": "^4.13.0"
   }
 }
