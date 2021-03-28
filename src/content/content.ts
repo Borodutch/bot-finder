@@ -29,6 +29,17 @@ const runScript = async () => {
       botButton.className = 'comments__item__reply __vcbf';
       botButton.innerHTML = 'Это бот?';
       botButton.onclick = async () => {
+        window.addEventListener('click', function (e) {
+          if (
+            e.target &&
+            !(<HTMLElement>e.target).classList.contains('__vcbf')
+          ) {
+            if (botDropdown.style.display === 'block') {
+              botDropdown.style.display = 'none';
+            }
+          }
+        });
+
         if (botDropdown.style.display === 'none') {
           // Preloader
           let html = '<div class="__vcbf__popup-preloader">';
@@ -36,10 +47,8 @@ const runScript = async () => {
           html += '</div>';
           botDropdown.innerHTML = html;
           botDropdown.style.display = 'block';
-
           // Load user data
           const userData = await parseUser(userLink);
-
           // Parse user data
           const user = {
             name: userData.header.subsiteData.name,
@@ -48,17 +57,15 @@ const runScript = async () => {
             commentsCount: userData.header.tabs[1].counter,
             articlesCount: userData.header.tabs[0].counter,
             isPremium: userData.header.subsiteData.isPlus,
-          }
-
+          };
           // Styling karma
           let karmaClass = ' ';
           if (user.karma > 0) {
             karmaClass += '__vcbf__popup-header_karma--positive';
             user.karma = '+' + user.karma;
-          } else if(user.karma < 0) {
+          } else if (user.karma < 0) {
             karmaClass += '__vcbf__popup-header_karma--negative';
           }
-
           // Set popup header
           html = '';
           html += '<div class="__vcbf__popup-header">';
@@ -67,7 +74,9 @@ const runScript = async () => {
           html += '</div>';
           // Set popup content
           html += '<div class="__vcbf__popup-content">';
-          html += `<div><span>Премиум</span>? ${ user.isPremium ? 'Да' : 'Нет' }</div>`;
+          html += `<div><span>Премиум</span>? ${
+            user.isPremium ? 'Да' : 'Нет'
+          }</div>`;
           html += `<div><span>Комментариев</span>: ${user.commentsCount} шт.</div>`;
           html += `<div><span>Статей</span>: ${user.articlesCount} шт.</div>`;
           html += `<div>${user.registerDate}</div>`;

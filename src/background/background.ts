@@ -4,12 +4,10 @@ chrome.runtime.onInstalled.addListener(function (details) {
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    chrome.tabs.sendMessage(
-      tabs[0].id || 0,
-      { action: 'RELOAD' },
-      function (response) {
+    if (tabs[0].id) {
+      chrome.tabs.sendMessage(tabs[0].id, { action: 'RELOAD' }, function (_) {
         void chrome.runtime.lastError;
-      }
-    );
+      });
+    }
   });
 });
