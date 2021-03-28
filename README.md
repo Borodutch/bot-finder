@@ -1,5 +1,9 @@
 # VC, TJ and DTF bots finder browser extension
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/backmeupplz/bot-finder/main/img/screenshot.png" alt="Screenshot" />
+</p>
+
 ## Getting started
 
 Navigate to the project directory and install the dependencies.
