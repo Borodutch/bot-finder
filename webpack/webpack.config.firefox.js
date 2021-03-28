@@ -1,6 +1,6 @@
-const webpack = require('webpack');
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: {
@@ -78,6 +78,6 @@ const config = {
       ],
     }),
   ],
-};
+}
 
-module.exports = config;
+module.exports = config

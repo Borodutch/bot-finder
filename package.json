@@ -4,8 +4,8 @@
   "description": "Web extension that shows account creation date and last comments for users of vc.ru, dtf.ru and tjournal.ru in the comments.",
   "scripts": {
     "increment-version": "versiony package.json --patch && versiony manifests/firefox/manifest.json --patch && versiony manifests/webkit/manifest.json --patch && git add . && git commit -m 'new version' && git push",
-    "build-webkit": "webpack --mode=production --config ./webpack.config.webkit.js",
-    "build-firefox": "webpack --mode=production --config ./webpack.config.firefox.js",
+    "build-webkit": "webpack --mode=production --config webpack/webpack.config.webkit.js",
+    "build-firefox": "webpack --mode=production --config webpack/webpack.config.firefox.js",
     "archive": "node scripts/build-archive.js",
     "publish-chrome": "node scripts/publish-chrome.js",
     "publish-firefox": "node scripts/publish-firefox.js",
