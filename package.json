@@ -1,7 +1,7 @@
 {
   "name": "vc-bots-finder",
   "version": "1.0.0",
-  "description": "Web extension that shows account creation date and last comments for users of vc.ru in the comments.",
+  "description": "Web extension that shows account creation date and last comments for users of vc.ru, dtf.ru and tjournal.ru in the comments.",
   "scripts": {
     "release-webkit": "webpack --mode=production --config ./webpack.config.webkit.js && node ./scripts/build-archive.js",
     "release-firefox": "webpack --mode=production --config ./webpack.config.firefox.js && node ./scripts/build-archive.js"

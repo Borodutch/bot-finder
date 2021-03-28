@@ -75,8 +75,8 @@ const runScript = async () => {
           // Set popup content
           html += '<div class="__vcbf__popup-content">';
           html += `<div class="__vcbf__popup-content_date">${user.registerDate}</div>`;
-          html += `<div><span>Премиум</span>? ${
-            user.isPremium ? 'Да' : 'Нет'
+          html += `<div><span>Премиум</span>: ${
+            user.isPremium ? 'да' : 'нет'
           }</div>`;
           html += `<div><span>Комментариев</span>: ${user.commentsCount} шт.</div>`;
           html += `<div><span>Статей</span>: ${user.articlesCount} шт.</div>`;

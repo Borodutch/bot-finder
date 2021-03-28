@@ -1,8 +1,8 @@
 {
-  "name": "VC Это бот?",
+  "name": "Это бот?",
   "description": "Простое расширение, которое позволяет быстро увидеть, бот ли пользователь в комментариях.",
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -21,17 +21,31 @@
       "strict_min_version": "45.0"
     }
   },
-  "permissions": ["storage", "tabs", "activeTab"],
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": true
   },
   "short_name": "VC bots",
   "content_scripts": [
     {
-      "matches": ["*://vc.ru/*"],
-      "js": ["content.js"],
-      "css": ["vcbf.css"],
+      "matches": [
+        "*://vc.ru/*",
+        "*://tjournal.ru/*",
+        "*://dtf.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "vcbf.css"
+      ],
       "run_at": "document_idle"
     }
   ]

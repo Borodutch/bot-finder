@@ -18,7 +18,7 @@ const App = (props: IAppProps) => {
       <header className={"App-header" + (bots ? "" : " App-header--inactive")}>
         <img src={logo} className="App-logo" alt="logo" />
         <div className="App-settings">
-          <label htmlFor="bots-checkbox">Bots finder</label>
+          <label htmlFor="bots-checkbox">Поиск ботов</label>
           <input type="checkbox" id="bots-checkbox" checked={!!bots} onChange={() => {setBots(!bots)}} />
         </div>
       </header>

@@ -16,18 +16,18 @@ body {
 
 .App-logo {
   pointer-events: none;
+  width: 150px;
 }
 
 .App-header {
-  background-color: #feebef;
+  background-color: #111;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
   min-width: 100px;
   padding: 10px;
-  color: #444;
 }
 
 .App-settings {

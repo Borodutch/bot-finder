@@ -1,4 +1,4 @@
-# VC bots finder browser extension
+# VC, TJ and DTF bots finder browser extension
 
 ## Getting started
 
@@ -16,7 +16,7 @@ $ yarn release-webkit
 
 ## To build the extension for Safari
 
-You need to have XCode installed on your Mac
+You need to have XCode installed on your Mac.
 
 Follow instructions for [Chrome](https://github.com/backmeupplz/vc-bots-finder/#to-build-the-extension-for-chrome-and-opera-run), then follow these instructions from Apple:
 
@@ -27,7 +27,7 @@ xcrun safari-web-extension-converter /Volumes/Experiments/vc-bots-finder/dist/
 ```
 
 If you don't have developer certificate, you'll also need to follow these instructions:
-https://developer.apple.com/documentation/safariservices/safari_app_extensions/building_a_safari_app_extension#2957926 (see "Enable Your App Extension in Safari")
+https://developer.apple.com/documentation/safariservices/safari_app_extensions/building_a_safari_app_extension#2957926 (see "Enable Your App Extension in Safari").
 
 ## To build the extension for Firefox, run
 
