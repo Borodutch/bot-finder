@@ -6,7 +6,7 @@
     "increment-version": "versiony package.json --patch && versiony manifests/firefox/manifest.json --patch && versiony manifests/webkit/manifest.json --patch && git add . && git commit -m 'new version' && git push",
     "build-webkit": "webpack --mode=production --config webpack/webpack.config.webkit.js",
     "build-firefox": "webpack --mode=production --config webpack/webpack.config.firefox.js",
-    "archive": "node scripts/build-archive.js",
+    "archive": "node scripts/archive.js",
     "publish-chrome": "node scripts/publish-chrome.js",
     "publish-firefox": "node scripts/publish-firefox.js",
     "build-and-publish": "yarn increment-version && yarn build-webkit && yarn publish-chrome && yarn build-firefox && yarn publish-firefox"
