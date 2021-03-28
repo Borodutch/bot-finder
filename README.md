@@ -4,6 +4,8 @@
   <img src="https://raw.githubusercontent.com/backmeupplz/bot-finder/main/img/screenshot.png" alt="Screenshot" />
 </p>
 
+Try it in [Chrome Web Store](https://chrome.google.com/webstore/detail/vc-%D1%8D%D1%82%D0%BE-%D0%B1%D0%BE%D1%82/fbjbccjcmmnegakmjkklplmijeilnbhd) and [Firefox Browser Add-ons](https://addons.mozilla.org/en-US/firefox/addon/bot-finder/).
+
 ## Getting started
 
 Navigate to the project directory and install the dependencies.
