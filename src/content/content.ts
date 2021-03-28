@@ -74,12 +74,12 @@ const runScript = async () => {
           html += '</div>';
           // Set popup content
           html += '<div class="__vcbf__popup-content">';
+          html += `<div class="__vcbf__popup-content_date">${user.registerDate}</div>`;
           html += `<div><span>Премиум</span>? ${
             user.isPremium ? 'Да' : 'Нет'
           }</div>`;
           html += `<div><span>Комментариев</span>: ${user.commentsCount} шт.</div>`;
           html += `<div><span>Статей</span>: ${user.articlesCount} шт.</div>`;
-          html += `<div>${user.registerDate}</div>`;
           html += '</div>';
 
           botDropdown.innerHTML = html;
