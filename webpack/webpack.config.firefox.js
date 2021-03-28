@@ -4,12 +4,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: {
-    popup: path.join(__dirname, 'src/popup/popup.tsx'),
-    content: path.join(__dirname, 'src/content/content.ts'),
-    background: path.join(__dirname, 'src/background/background.ts'),
+    popup: path.join(__dirname, '../src/popup/popup.tsx'),
+    content: path.join(__dirname, '../src/content/content.ts'),
+    background: path.join(__dirname, '../src/background/background.ts'),
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     filename: '[name].js',
     clean: true,
   },
@@ -74,7 +74,7 @@ const config = {
     new CopyPlugin({
       patterns: [
         { from: 'public', to: '.' },
-        { from: 'manifests/webkit/manifest.json', to: '.' },
+        { from: 'manifests/firefox/manifest.json', to: '.' },
       ],
     }),
   ],
