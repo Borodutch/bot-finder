@@ -30,16 +30,50 @@ const runScript = async () => {
       botButton.innerHTML = 'Это бот?';
       botButton.onclick = async () => {
         if (botDropdown.style.display === 'none') {
-          botDropdown.innerHTML = 'Загрузка...';
+          // Preloader
+          let html = '<div class="__vcbf__popup-preloader">';
+          html += 'Загрузка...';
+          html += '</div>';
+          botDropdown.innerHTML = html;
           botDropdown.style.display = 'block';
+
+          // Load user data
           const userData = await parseUser(userLink);
-          botDropdown.innerHTML = `${userData.header.subsiteData.name} (${
-            userData.header.subsiteData.isPlus ? 'Премиум, ' : ''
-          }карма: ${userData.header.subsiteData.karma})<br /><br />${
-            userData.header.stats[0].label
-          }<br /><br />Комментариев: ${
-            userData.header.tabs[1].counter
-          }<br>Статей: ${userData.header.tabs[0].counter}`;
+
+          // Parse user data
+          const user = {
+            name: userData.header.subsiteData.name,
+            karma: userData.header.subsiteData.karma || 0,
+            registerDate: userData.header.stats[0].label,
+            commentsCount: userData.header.tabs[1].counter,
+            articlesCount: userData.header.tabs[0].counter,
+            isPremium: userData.header.subsiteData.isPlus,
+          }
+
+          // Styling karma
+          let karmaClass = ' ';
+          if (user.karma > 0) {
+            karmaClass += '__vcbf__popup-header_karma--positive';
+            user.karma = '+' + user.karma;
+          } else if(user.karma < 0) {
+            karmaClass += '__vcbf__popup-header_karma--negative';
+          }
+
+          // Set popup header
+          html = '';
+          html += '<div class="__vcbf__popup-header">';
+          html += `<div class="__vcbf__popup-header_name">${user.name}</div>`;
+          html += `<div class="__vcbf__popup-header_karma${karmaClass}">${user.karma}</div>`;
+          html += '</div>';
+          // Set popup content
+          html += '<div class="__vcbf__popup-content">';
+          html += `<div><span>Премиум</span>? ${ user.isPremium ? 'Да' : 'Нет' }</div>`;
+          html += `<div><span>Комментариев</span>: ${user.commentsCount} шт.</div>`;
+          html += `<div><span>Статей</span>: ${user.articlesCount} шт.</div>`;
+          html += `<div>${user.registerDate}</div>`;
+          html += '</div>';
+
+          botDropdown.innerHTML = html;
         } else {
           botDropdown.style.display = 'none';
         }
