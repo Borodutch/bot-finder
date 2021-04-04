@@ -1,4 +1,4 @@
-<h1 align="center">Bots finder</h1>
+<h1 align="center">Bot finder</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/backmeupplz/bot-finder/main/img/screenshot.png" alt="Screenshot" />
