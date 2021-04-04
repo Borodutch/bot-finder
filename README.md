@@ -50,6 +50,6 @@ $ yarn build-firefox && yarn archive
 
 After the project has been built, a directories named `dist` and `build` (with build archive) have been created.
 
-## Read about this extension
+## Publications
 - [vc.ru](https://vc.ru/tribuna/226020-eto-bot-rasshirenie-dlya-brauzera-pokazyvayushchee-bolshe-informacii-o-kommentatorah-na-vc-ru?comments=)
 - [TJ](https://tjournal.ru/flood/362516-my-napisali-rasshirenie-dlya-brauzera-pokazyvayushchee-bolshe-informacii-o-kommentatorah-na-tjournal?comment=5264653)
